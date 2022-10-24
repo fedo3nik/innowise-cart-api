@@ -13,6 +13,9 @@ You'll be developing an API for an online shopping cart in the Go programming la
 This is a REST API for basic CRUD operations for an online shopping cart. Data
 should be persisted in a storage layer which can use Postgres.
 
+You should use default `net/http` package for REST implementation; `sqlx` or `sqlc` for interact with postgres;
+all the queries should be wrote mannually (no ORM, no `Select` methods and etc.); your repo should be private.
+
 ### Domain Types
 
 The Cart API consists of two simple types: `Cart` and `CartItem`. The `Cart`
@@ -24,7 +27,7 @@ holds zero or more `CartItem` objects.
 A new cart should be created and an ID generated. The new empty cart should be returned.
 
 ```sh
-POST /carts -d '{}'
+POST http://localhost:3000/carts -d '{}'
 ```
 
 ```json
@@ -76,7 +79,7 @@ An existing cart should be able to be viewed with its items. Should fail if the
 cart does not exist.
 
 ```sh
-GET /carts/1
+GET http://localhost:3000/carts/1
 ```
 
 ```json
