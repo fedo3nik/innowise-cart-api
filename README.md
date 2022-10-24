@@ -28,6 +28,8 @@ Create a `Dockerfile` for your application.
 The Cart API consists of two simple types: `Cart` and `CartItem`. The `Cart`
 holds zero or more `CartItem` objects.
 
+`CartItem` objects should be created in DB exactly (not from application).
+
 
 ### Create Cart
 
