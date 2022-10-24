@@ -16,6 +16,13 @@ should be persisted in a storage layer which can use Postgres.
 You should use default `net/http` package for REST implementation; `sqlx` or `sqlc` for interact with postgres;
 all the queries should be wrote mannually (no ORM, no `Select` methods and etc.); your repo should be private.
 
+#### Additional requirements
+
+Cover your code with the unit tests (you could use `testify`).
+
+Create a `Dockerfile` for your application.
+
+
 ### Domain Types
 
 The Cart API consists of two simple types: `Cart` and `CartItem`. The `Cart`
