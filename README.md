@@ -52,13 +52,13 @@ POST http://localhost:3000/carts -d '{}'
 Cart can contain only 5 products
 
 A new item should be added to an existing cart. 
+The new item should be returned.
 
 Should fail if:
   - The cart does not exist.
   - The product name is blank.
   - The price is non-positive.
   - The cart already contains 5 products.
-The new item should be returned.
 
 ```sh
 POST http://localhost:3000/carts/1/items -d '{
